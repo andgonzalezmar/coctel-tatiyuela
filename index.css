@@ -6,14 +6,14 @@ html {
 
 *,
 *::after,
-*::before{
+*::before {
     margin: 0;
     padding: 0;
     font-family: inherit;
     box-sizing: inherit;
 }
 
-.intro{
+.intro {
     position: fixed;
     top: 0;
     left: 0;
@@ -24,7 +24,8 @@ html {
     justify-content: center;
     flex-direction: column;
     z-index: 1;
-    background: #000;
+    background: linear-gradient(to right, rgb(252, 118, 1) 0%, rgb(255, 217, 0) 100%);
+    /*background: #000;*/
     transition: 1s;
 }
 
@@ -35,16 +36,16 @@ html {
 
 .intro p {
     color: gray;
-    font-size: 1.6rem; 
+    font-size: 1.6rem;
     margin-top: 70px;
-} 
-
-.logo {
-    font-size: 5rem; 
-    color:white;
 }
 
-.logo-parts{
+.logo {
+    font-size: 5rem;
+    color: white;
+}
+
+.logo-parts {
     text-align: center;
     position: relative;
     display: inline-block;
@@ -52,20 +53,53 @@ html {
     opacity: 0;
 }
 
-.logo-parts.active{
+.logo-parts.active {
     bottom: 0;
     opacity: 1;
     transition: ease-in-out.5s;
 }
 
-.logo-parts.fade{
+.logo-parts.fade {
     bottom: 250px;
     opacity: 0;
     transition: ease-in-out.5s;
 }
 
-.content{
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    padding: 50px;
-    font-size: 2rem;
+    flex-direction: column;
+}
+
+.cuerpo {
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+    height: 650px;
+    width: 650px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 100px 0;
+    border-radius: 70px;
+}
+
+.cuerpo img{
+    border-radius: 15px;
+    width:100%;
+}
+
+@media only screen and (min-width: 320px) and (max-width: 576px) {
+    .cuerpo {
+        box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.2);
+        height: 350px;
+        width: 350px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        color: white;
+        margin: 100px 0;
+        border-radius: 70px;
+    }
 }
